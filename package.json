@@ -1,26 +1,8 @@
 {
   "name": "markdown-magic-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lodash template support via Markdown Magic",
-  "main": "index.js",
-  "scripts": {
-    "docs": "node example.js",
-    "prepublish": "npm run docs"
-  },
-  "keywords": [
-    "markdown-magic",
-    "lodash",
-    "template",
-    "plugin"
-  ],
-  "author": "Patrick Camacho <patrick@daftdevelopers.com>",
   "license": "MIT",
-  "devDependencies": {
-    "markdown-magic": "^0.1.13"
-  },
-  "dependencies": {
-    "lodash.template": "^4.4.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/camacho/markdown-magic-template.git"
@@ -28,5 +10,29 @@
   "bugs": {
     "url": "https://github.com/camacho/markdown-magic-template/issues"
   },
-  "homepage": "https://github.com/camacho/markdown-magic-template#readme"
+  "homepage": "https://github.com/camacho/markdown-magic-template#readme",
+  "author": "Patrick Camacho <patrick@daftdevelopers.com>",
+  "keywords": [
+    "markdown-magic",
+    "lodash",
+    "template",
+    "plugin",
+    "markdown"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "docs": "node example.js",
+    "format": "prettier --single-quote --trailing-comma es5 --write index.js example.js",
+    "prepublish": "npm run docs"
+  },
+  "dependencies": {
+    "lodash.template": "^4.4.0"
+  },
+  "peerDependencies": {
+    "markdown-magic": ">=0.1 <=2.x"
+  },
+  "devDependencies": {
+    "markdown-magic": "^0.1.13",
+    "prettier": "^2.0.0"
+  }
 }
