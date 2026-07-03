@@ -1,8 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const template = require('lodash.template');
+import { readFileSync } from 'fs';
+import path from 'path';
+import template from 'lodash.template';
 
-module.exports = (obj) => function TEMPLATE(content, options = {}, config) {
-  const filepath = path.resolve(path.dirname(config.originalPath), options.src);
-  return template(fs.readFileSync(filepath, 'utf8'))(obj);
+export default function TEMPLATE({ content, options = {}, srcPath }) {
+  if (!options.src) return content;
+
+  const filepath = path.resolve(path.dirname(srcPath), options.src);
+  const compiled = template(readFileSync(filepath, 'utf8'));
+
+  return compiled(options.data || {});
 }
