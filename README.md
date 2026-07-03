@@ -22,11 +22,7 @@ import TEMPLATE from './index.js';
 const config = {
   matchWord: 'AUTO-GENERATED-CONTENT',
   transforms: {
-    TEMPLATE: (args) =>
-      TEMPLATE({
-        ...args,
-        options: { ...args.options, data: { name: 'world' } },
-      }),
+    TEMPLATE: TEMPLATE({ name: 'world' }),
   },
 };
 
@@ -47,4 +43,3 @@ await markdownMagic(markdownPath, config);
 ## Options
 
 - **src** (required) - path to template, relative to the Markdown file
-- **data** (optional) - object of values passed to the Lodash template

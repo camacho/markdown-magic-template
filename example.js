@@ -5,11 +5,7 @@ import TEMPLATE from './index.js';
 const config = {
   matchWord: 'AUTO-GENERATED-CONTENT',
   transforms: {
-    TEMPLATE: (args) =>
-      TEMPLATE({
-        ...args,
-        options: { ...args.options, data: { name: 'world' } },
-      }),
+    TEMPLATE: TEMPLATE({ name: 'world' }),
   },
 };
 
