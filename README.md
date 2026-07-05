@@ -1,3 +1,5 @@
+> **📦 This package has moved.** It now lives in the [markdown-magic-plugins](https://github.com/camacho/markdown-magic-plugins) monorepo at [`packages/template`](https://github.com/camacho/markdown-magic-plugins/tree/main/packages/template). This repository is archived; issues and contributions go to the monorepo.
+
 # Template plugin
 
 Add [Lodash template](https://lodash.com/docs/4.17.4#template) support to markdown files via [markdown-magic](https://github.com/DavidWells/markdown-magic)
